@@ -1,6 +1,5 @@
 package com.servlet;
 
-import com.java.*;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -9,39 +8,31 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- * Servlet implementation class Login
+ * Servlet implementation class Home
  */
-public class Login extends HttpServlet {
+public class Home extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Login() {
+    public Home() {
         super();
+        // TODO Auto-generated constructor stub
     }
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		response.getWriter().println("Login Successfully Done!");
 	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String user = request.getParameter("user");
-		String pass = request.getParameter("pass");
-		LoginCheck lc = new LoginCheck(user, pass);
-		int a = lc.status();
-		if(a==1) {
-			response.sendRedirect("Home");
-		}
-		else {
-			response.getWriter().println("Invalid User or Password!");
-		}
+		
 	}
 
 }

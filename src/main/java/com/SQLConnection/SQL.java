@@ -4,6 +4,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Properties;
@@ -57,7 +58,7 @@ public class SQL {
 	public void insert(String fname, String lname, String email, String user, String pass) {
 		int num = 0;
 		try {
-			PreparedStatement ps  = conn.prepareStatement("insert into Audience values (?,?,?,?,?)");
+			PreparedStatement ps  = conn.prepareStatement("insert into accounts values (?,?,?,?,?)");
 			ps.setString(1,fname);
 			ps.setString(2, lname);
 			ps.setString(3, email);
@@ -70,5 +71,33 @@ public class SQL {
 		catch (SQLException e) {
 			e.printStackTrace();
 		}
+	}
+	
+	public int login(String user, String pass) {
+		String u = null ,p = null;
+		int a=0;
+		try {
+			PreparedStatement ps = conn.prepareStatement("select user_name, user_password from accounts where user_name = ? and user_password = ? ");
+			ps.setString(1, user);
+			ps.setString(2, pass);
+			ResultSet rs = ps.executeQuery();
+			while(rs.next()) {
+				u = rs.getString(1);
+				p = rs.getString(2);
+			}
+			if(user.equals(u) && pass.equals(p)) {
+				a=1;
+				System.out.println("Authorised");
+			}
+			else {
+				a=0;
+				System.out.println("Unauthorized");
+			}
+		} 
+		
+		catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return a;
 	}
 }
