@@ -1,0 +1,145 @@
+@charset "UTF-8";
+
+.pointer{
+	cursor: pointer;
+}
+
+a{
+	color: black;
+	text-decoration: none;
+}
+
+/* Login Start */
+
+.background-login{
+    background-image: url(../img/login.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container-login{
+    width: 350px;
+    margin-left: 200px;
+    margin-top: 200px;
+}
+
+.login-btn{
+    background-color:rgb(238, 137, 48);
+    border-radius: 12px;
+    margin-top: 20px;
+    border-style: none;
+    width: 100px;
+    height: 30px;
+    color: white;
+}
+
+.login-checkbox{
+	margin-top: 15px;
+}
+
+.login-label{
+	margin-left:0px;
+	margin-top: 10px;
+    font-size: medium;
+    font-weight: 500;
+}
+
+
+@media (max-width: 600px){
+    .container-login{
+        width: 250px;
+        margin-left: 150px;
+    }
+    .background-login{
+        background-size: auto;
+    }
+}
+
+@media (min-width: 600px) and (max-width:1000px){
+    .container-login{
+        width: 300px;
+        margin-left: 250px;
+    }
+    .background-login{
+        background-size: auto;
+    }
+}
+
+@media (min-width: 1000px) and (max-width: 1400px){
+    .container-login{
+        width: 350px;
+        margin-left: 350px;
+    }
+    .background-login{
+        background-size: auto;
+    }
+}
+
+/* Login End */
+
+/* SignUp Start */
+.background-signup{
+    background-image: url(../img/Signup.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container-signup{
+    width: 370px;
+    margin-left: 550px;
+    margin-top: 100px;
+    backdrop-filter: blur(10px);
+}
+
+.signup-input{
+    width: 350px;
+}
+
+.signup-label{
+    padding-left: 12px;
+    margin-top: 10px;
+    font-size: medium;
+    font-weight: 500;
+}
+
+.signup-btn{
+    background-color:rgb(238, 137, 48);
+    border-radius: 12px;
+    margin-top: 20px;
+    border-style: none;
+    width: 100px;
+    height: 30px;
+    color: white;
+    margin-left: 140px;
+}
+
+@media (max-width: 600px){
+    .container-signup{
+        width: 200px;
+        margin-left: 90px;
+    }
+    .background-signup{
+        background-size: auto;
+    }
+    
+}
+
+@media (min-width: 600px) and (max-width:1000px){
+    .container-signup{
+        width: 300px;
+        margin-left: 250px;
+    }
+    .background-signup{
+        background-size: auto;
+    }
+}
+
+@media (min-width: 1000px) and (max-width: 1400px){
+    .container-signup{
+        width: 350px;
+        margin-left: 350px;
+    }
+    .background-signup{
+        background-size: auto;
+    }
+}
