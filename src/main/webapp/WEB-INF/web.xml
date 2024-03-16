@@ -39,4 +39,14 @@
     <servlet-name>Home</servlet-name>
     <url-pattern>/Home</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AddWord</display-name>
+    <servlet-name>AddWord</servlet-name>
+    <servlet-class>com.servlet.AddWord</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddWord</servlet-name>
+    <url-pattern>/AddWord</url-pattern>
+  </servlet-mapping>
 </web-app>

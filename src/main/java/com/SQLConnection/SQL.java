@@ -100,4 +100,20 @@ public class SQL {
 		}
 		return a;
 	}
+	
+	public int insertWord(String word, String meaning) {
+		int num =0;
+		try {
+			PreparedStatement ps = conn.prepareStatement("insert into mydictionary values(?,?)");
+			ps.setString(1, word);
+			ps.setString(2, meaning);
+			num = ps.executeUpdate();
+			System.out.println(num +" Row Inserted");
+		} 
+		
+		catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return num;
+	}
 }
