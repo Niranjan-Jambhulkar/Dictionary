@@ -19,14 +19,14 @@
 
 <div class="home-container">
     <form action="" method="post">
-        <label for="word" class="form-label home-label row col-6">Word</label>
-        <input type="text" name="word" id="" class="form-control col-6" placeholder="Word" required>
+        <label for="word" class="form-label home-label row col-6">Search</label>
+        <input type="text" name="word" id="" class="form-control col-6" placeholder="Enter Word" required>
         <textarea name="" id="" cols="38" rows="5" class="form-control home-textarea" placeholder="Meaning" readonly></textarea>
         <input type="submit" value="Submit" class="home-submit-btn">
     </form>
     <div class="option row">
-        <p class="option-text option-selection col-6">Meaning</p>
-        <p class="option-text col-6">Add Word</p>
+        <p class="option-text option-selection pointer col-6" onClick="Meaning()">Meaning</p>
+        <p class="option-text pointer col-6" onClick="addWord()">Add Word</p>
     </div>
 </div>
 </body>
