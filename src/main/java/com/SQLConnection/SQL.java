@@ -116,4 +116,20 @@ public class SQL {
 		}
 		return num;
 	}
+	
+	public String search(String word) {
+		String meaning = null;
+		try {
+			PreparedStatement ps =  conn.prepareStatement("select meaning from mydictionary where word=?");
+			ps.setString(1, word);
+			ResultSet rs = ps.executeQuery();
+			while(rs.next()) {
+				meaning = rs.getString(1);
+			}
+		} 
+		catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return meaning;
+	}
 }
