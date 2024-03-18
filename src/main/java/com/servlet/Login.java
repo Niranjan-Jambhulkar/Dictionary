@@ -37,7 +37,8 @@ public class Login extends HttpServlet {
 		LoginCheck lc = new LoginCheck(user, pass);
 		int a = lc.status();
 		if(a==1) {
-			response.sendRedirect("Home");
+			response.getWriter().println("Login Successfully Done!");
+			response.sendRedirect("Home.html");
 		}
 		else {
 			response.getWriter().println("Invalid User or Password!");
