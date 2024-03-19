@@ -6,6 +6,8 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
+
 import java.io.IOException;
 
 /**
@@ -38,7 +40,8 @@ public class Login extends HttpServlet {
 		int a = lc.status();
 		if(a==1) {
 			response.getWriter().println("Login Successfully Done!");
-			response.sendRedirect("Home.jsp");
+			HttpSession session = request.getSession(true);
+			request.getRequestDispatcher("Home").forward(request, response);
 		}
 		else {
 			response.getWriter().println("Invalid User or Password!");

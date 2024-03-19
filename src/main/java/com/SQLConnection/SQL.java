@@ -126,6 +126,13 @@ public class SQL {
 			while(rs.next()) {
 				meaning = rs.getString(1);
 			}
+			if(meaning != null) {
+				System.out.println("Word Found");
+			}
+			else {
+				System.out.println("Word not Found");
+				meaning = "Word not Found";
+			}
 		} 
 		catch (SQLException e) {
 			e.printStackTrace();

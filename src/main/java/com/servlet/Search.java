@@ -42,7 +42,6 @@ public class Search extends HttpServlet {
 		if (meaning!=null) {
 			request.setAttribute("a", meaning);
 			request.getRequestDispatcher("Home.jsp").forward(request, response);
-			//response.getWriter().println("Meaning: " + meaning);
 		}
 		else {
 			response.getWriter().println("No Word Found");

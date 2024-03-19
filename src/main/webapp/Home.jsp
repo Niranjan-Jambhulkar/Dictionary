@@ -18,13 +18,18 @@
 <body class="background-home">
 <h1 class="home-heading">Dictionary</h1>
 <%! 
-String a="Hello"; 
+String a="Meaning"; 
 %>
 <div class="home-container">
     <form action="Search" method="post">
         <label for="word" class="form-label home-label row col-6">Search</label>
         <input type="text" name="word" id="" class="form-control col-6" placeholder="Enter Word" required>
-        <input type="text" value="<%=request.getAttribute("a") %>" style="height: 100px" class="form-control home-textarea" placeholder="Meaning" readonly>
+        <textarea name="meaning" id="" cols="38" rows="5" class="form-control home-textarea"  readonly><%
+        String meaning = (String)request.getAttribute("a"); 
+        if(meaning!=null){
+        	out.println(meaning);
+        }
+        %></textarea>
         <input type="submit" value="Search" class="home-submit-btn">
     </form>
     <div class="option row">

@@ -7,5 +7,5 @@ function addWord(){
 }
 
 function Meaning(){
-	location.href = "Home.html"
+	location.href = "Home.jsp"
 }

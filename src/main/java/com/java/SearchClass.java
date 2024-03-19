@@ -12,12 +12,6 @@ public class SearchClass {
 	}
 	
 	public String status() {
-		if(meaning != null) {
-			System.out.println("Word Found");
-		}
-		else {
-			System.out.println("Word not Found");
-		}
 		return meaning;
 	}
 }
