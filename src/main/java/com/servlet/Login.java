@@ -38,7 +38,7 @@ public class Login extends HttpServlet {
 		int a = lc.status();
 		if(a==1) {
 			response.getWriter().println("Login Successfully Done!");
-			response.sendRedirect("Home.html");
+			response.sendRedirect("Home.jsp");
 		}
 		else {
 			response.getWriter().println("Invalid User or Password!");

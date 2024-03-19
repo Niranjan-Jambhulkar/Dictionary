@@ -40,11 +40,14 @@ public class Search extends HttpServlet {
 		SearchClass sc = new SearchClass(word);
 		meaning = sc.status();
 		if (meaning!=null) {
-			response.getWriter().println("Meaning: " + meaning);
+			request.setAttribute("a", meaning);
+			request.getRequestDispatcher("Home.jsp").forward(request, response);
+			//response.getWriter().println("Meaning: " + meaning);
 		}
 		else {
 			response.getWriter().println("No Word Found");
 		}
+		
 	}
 
 }

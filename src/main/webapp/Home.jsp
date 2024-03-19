@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,16 +14,17 @@
 
 <!-- Java Script -->
 <script src="Source/js/Dictionary.js"></script>
-
 </head>
 <body class="background-home">
 <h1 class="home-heading">Dictionary</h1>
-
+<%! 
+String a="Hello"; 
+%>
 <div class="home-container">
     <form action="Search" method="post">
         <label for="word" class="form-label home-label row col-6">Search</label>
         <input type="text" name="word" id="" class="form-control col-6" placeholder="Enter Word" required>
-        <textarea name="" value="" id="" cols="38" rows="5" class="form-control home-textarea" placeholder="Meaning" readonly></textarea>
+        <input type="text" value="<%=request.getAttribute("a") %>" style="height: 100px" class="form-control home-textarea" placeholder="Meaning" readonly>
         <input type="submit" value="Search" class="home-submit-btn">
     </form>
     <div class="option row">
@@ -29,5 +32,6 @@
         <p class="option-text pointer col-6" onClick="addWord()">Add Word</p>
     </div>
 </div>
+
 </body>
 </html>
