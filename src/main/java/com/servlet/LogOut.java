@@ -10,17 +10,17 @@ import jakarta.servlet.http.HttpSession;
 import java.io.IOException;
 
 /**
- * Servlet implementation class Home
+ * Servlet implementation class LogOut
  */
-public class Home extends HttpServlet {
+public class LogOut extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Home() {
+    public LogOut() {
         super();
-
+        // TODO Auto-generated constructor stub
     }
 
 	/**
@@ -35,12 +35,7 @@ public class Home extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession Session = request.getSession(false);
-		String user = request.getParameter("user");
-		if(Session != null) {
-			String sessionId = request.getRequestedSessionId();
-			request.setAttribute("name", user);
-			request.getRequestDispatcher("Home.jsp").forward(request, response);	
-		}
+		Session.invalidate();
 	}
 
 }

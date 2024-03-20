@@ -40,7 +40,7 @@ public class Login extends HttpServlet {
 		int a = lc.status();
 		if(a==1) {
 			response.getWriter().println("Login Successfully Done!");
-			HttpSession session = request.getSession(true);
+			HttpSession Session = request.getSession(true);
 			request.getRequestDispatcher("Home").forward(request, response);
 		}
 		else {

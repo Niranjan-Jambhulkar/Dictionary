@@ -15,7 +15,17 @@
 
 </head>
 <body class="background-home">
-<h1 class="home-heading">Dictionary</h1>
+<div class="row">
+	<h1 class="home-heading col-10">Dictionary</h1>
+	
+  	<div class="dropdown col">
+  		<button onclick="myFunction()" class="dropbtn">Dropdown</button>
+  		<div id="myDropdown" class="dropdown-content">
+    		<a href="#home">My Profile</a>
+    		<a href="#about">Log Out</a>
+  		</div>
+	</div>
+</div>
 
 <div class="home-container">
     <form action="AddWord" method="post">

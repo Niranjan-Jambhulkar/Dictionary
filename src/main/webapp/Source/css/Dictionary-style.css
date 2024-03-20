@@ -222,6 +222,18 @@ a{
     font-size: large;
 }
 
+.profile-btn{
+	background-color:rgb(238, 137, 48);
+    border-radius: 12px;
+    margin-top: 20px;
+    border-style: none;
+    width: 100px;
+    height: 35px;
+    color: white;
+    font-size: large;
+}
+
+
 @media (max-width: 600px){
     .background-home{
         background-size: auto;
@@ -254,3 +266,44 @@ a{
         margin-left: 400px;
     }
 }
+
+/* New */
+
+.dropbtn {
+  background-color: #3498DB;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #2980B9;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
