@@ -210,16 +210,27 @@ a{
 }
 
 .option-text{
-    padding-top: 5px;
+    text-align: center;
 }
 
 .option-selection{
     background-color: rgb(238, 137, 48); 
-    text-align: center;
     border-radius: 12px;
     height: 40px;
+    width: 110px;
     color: white;
     font-size: large;
+    border: none;
+}
+
+.non-selection{
+	background-color: white; 
+    border-radius: 12px;
+    height: 40px;
+    width: 110px;
+    color: black;
+    font-size: large;
+    border: none;
 }
 
 .profile-btn{

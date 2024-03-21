@@ -69,4 +69,14 @@
     <servlet-name>LogOut</servlet-name>
     <url-pattern>/LogOut</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Selection</display-name>
+    <servlet-name>Selection</servlet-name>
+    <servlet-class>com.servlet.Selection</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Selection</servlet-name>
+    <url-pattern>/Selection</url-pattern>
+  </servlet-mapping>
 </web-app>

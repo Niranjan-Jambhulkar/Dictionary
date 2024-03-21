@@ -10,44 +10,47 @@ import jakarta.servlet.http.HttpSession;
 import java.io.IOException;
 
 /**
- * Servlet implementation class Home
+ * Servlet implementation class Selection
  */
-public class Home extends HttpServlet {
+public class Selection extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Home() {
+    public Selection() {
         super();
-
     }
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		HttpSession Session = request.getSession(false);
-		Session.getId();
-		String user = request.getParameter("user");
-		if(Session != null) {
-			String sessionId = request.getRequestedSessionId();
-			request.setAttribute("name", user);
-			request.getRequestDispatcher("Home.jsp").forward(request, response);
-		}
+		
 	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String select = request.getParameter("select");
 		HttpSession Session = request.getSession(false);
-		String na = (String) Session.getAttribute("us");
 		if(Session != null) {
-			request.setAttribute("name", na);
-			request.getRequestDispatcher("Home.jsp").forward(request, response);	
+		if(select == null) {
+			//String na = (String) Session.getAttribute("us");
+			//request.setAttribute("name", na);
+			request.getRequestDispatcher("Home").forward(request, response);
 		}
-		
+		switch(select) {
+		case "Meaning":
+			request.getRequestDispatcher("Home").forward(request, response);
+			break;
+			
+		case "Add Word":
+			request.getRequestDispatcher("AddWord").forward(request, response);
+			break;
+		}
+		}
 	}
 
 }

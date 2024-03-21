@@ -34,10 +34,12 @@
         <textarea name="meaning" id="" cols="38" rows="5" class="form-control home-textarea" placeholder="Meaning" required></textarea>
         <input type="submit" value="Add" class="home-submit-btn">
     </form>
-    <div class="option row">
-        <p class="option-text pointer col-6" onClick="Meaning()">Meaning</p>
-        <p class="option-text pointer option-selection col-6" onClick="addWord()">Add Word</p>
-    </div>
+    
+    <form class="option row" action="Selection" method="post">
+        <input type="submit" name="select" value="Meaning" class="option-text non-selection pointer col-6">
+        <input type="submit" name="select" value="Add Word" class="option-text option-selection pointer col-6">
+    </form>
+    
 </div>
 </body>
 </html>
