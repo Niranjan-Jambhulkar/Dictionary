@@ -19,7 +19,7 @@
 	<h1 class="home-heading col-10">Dictionary</h1>
 	
   	<div class="dropdown col">
-  		<button onclick="myFunction()" class="dropbtn">Hi </button>
+  		<button onclick="myFunction()" class="dropbtn">Hi <%=request.getAttribute("name")%> </button>
   		<div id="myDropdown" class="dropdown-content">
     		<a href="#home">My Profile</a>
     		<a href="#about">Log Out</a>

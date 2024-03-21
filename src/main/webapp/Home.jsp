@@ -16,20 +16,21 @@
 <script src="Source/js/Dictionary.js"></script>
 </head>
 <body class="background-home">
+<%! 
+String a="Meaning"; 
+%>
 <div class="row">
 	<h1 class="home-heading col-10">Dictionary</h1>
 	
   	<div class="dropdown col">
-  		<button onclick="myFunction()" class="dropbtn">Dropdown</button>
+  		<button onclick="myFunction()" class="dropbtn" >Hi <%=request.getAttribute("name")%></button>
   		<div id="myDropdown" class="dropdown-content">
-    		<a href="#home">My Profile</a>
-    		<a href="#about">Log Out</a>
+    		<a href="">My Profile</a>
+    		<a href="">Log Out</a>
   		</div>
 	</div>
 </div>
-<%! 
-String a="Meaning"; 
-%>
+
 <div class="home-container">
     <form action="Search" method="post">
         <label for="word" class="form-label home-label row col-6">Search</label>

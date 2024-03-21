@@ -41,6 +41,7 @@ public class Login extends HttpServlet {
 		if(a==1) {
 			response.getWriter().println("Login Successfully Done!");
 			HttpSession Session = request.getSession(true);
+			Session.setAttribute("us", user);
 			request.getRequestDispatcher("Home").forward(request, response);
 		}
 		else {

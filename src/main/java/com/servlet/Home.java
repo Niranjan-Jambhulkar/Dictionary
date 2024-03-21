@@ -27,7 +27,14 @@ public class Home extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+		HttpSession Session = request.getSession(false);
+		Session.getId();
+		String user = request.getParameter("user");
+		if(Session != null) {
+			String sessionId = request.getRequestedSessionId();
+			request.setAttribute("name", user);
+			request.getRequestDispatcher("Home.jsp").forward(request, response);
+		}
 	}
 
 	/**
@@ -35,12 +42,13 @@ public class Home extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession Session = request.getSession(false);
-		String user = request.getParameter("user");
+		String na = (String) Session.getAttribute("us");
 		if(Session != null) {
 			String sessionId = request.getRequestedSessionId();
-			request.setAttribute("name", user);
+			request.setAttribute("name", na);
 			request.getRequestDispatcher("Home.jsp").forward(request, response);	
 		}
+		
 	}
 
 }

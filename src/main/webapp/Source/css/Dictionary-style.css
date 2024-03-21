@@ -267,19 +267,24 @@ a{
     }
 }
 
-/* New */
+/* Profile */
 
 .dropbtn {
-  background-color: #3498DB;
+  background-color: rgb(238, 137, 48);
   color: white;
-  padding: 16px;
   font-size: 16px;
   border: none;
   cursor: pointer;
+  border-radius: 12px;
+  height: 40px;
+  width: 90px;
+  margin-top: 15px;
+  text-align: center;
+  
 }
 
 .dropbtn:hover, .dropbtn:focus {
-  background-color: #2980B9;
+  background-color: rgb(238, 137, 48);
 }
 
 .dropdown {

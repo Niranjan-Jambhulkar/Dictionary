@@ -3,7 +3,7 @@ function signup(){
 }
 
 function addWord(){
-	location.href = "AddWord.html"
+	location.href = "AddWord.jsp"
 }
 
 function Meaning(){
@@ -14,7 +14,6 @@ function myFunction() {
   document.getElementById("myDropdown").classList.toggle("show");
 }
 
-// Close the dropdown if the user clicks outside of it
 window.onclick = function(event) {
   if (!event.target.matches('.dropbtn')) {
     var dropdowns = document.getElementsByClassName("dropdown-content");

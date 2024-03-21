@@ -6,6 +6,8 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
+
 import java.io.IOException;
 
 /**
@@ -33,11 +35,18 @@ public class AddWord extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		HttpSession Session = request.getSession(false);
+		
+		if(Session!=null) {
+		String na = (String) Session.getAttribute("us");
+		request.setAttribute("name", na);
+		
 		String word = request.getParameter("word");
 		String meaning = request.getParameter("meaning");
 		AddWordClass add = new AddWordClass(word,meaning);
 		int num = add.status();
-		response.getWriter().println(num +" Row Inserted !");
+		request.getRequestDispatcher("AddWord.jsp").forward(request, response);
+		}
 	}
 
 }
