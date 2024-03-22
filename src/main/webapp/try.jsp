@@ -44,6 +44,7 @@ String a="Meaning";
         <input type="submit" value="Search" class="home-submit-btn">
     </form>
     
+    
     <form class="option row" action="Selection" method="post">
         <input type="submit" name="select" value="Meaning" class="option-text option-selection pointer col-6">
         <input type="submit" name="select" value="Add Word" class="option-text non-selection pointer col-6">

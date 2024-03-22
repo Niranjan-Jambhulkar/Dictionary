@@ -42,7 +42,7 @@ public class Login extends HttpServlet {
 			response.getWriter().println("Login Successfully Done!");
 			HttpSession Session = request.getSession(true);
 			Session.setAttribute("us", user);
-			request.getRequestDispatcher("Selection").forward(request, response);
+			request.getRequestDispatcher("Home").forward(request, response);
 		}
 		else {
 			response.getWriter().println("Invalid User or Password!");

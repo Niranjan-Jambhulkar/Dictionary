@@ -79,4 +79,14 @@
     <servlet-name>Selection</servlet-name>
     <url-pattern>/Selection</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>SelectionAddWord</display-name>
+    <servlet-name>SelectionAddWord</servlet-name>
+    <servlet-class>com.servlet.SelectionAddWord</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SelectionAddWord</servlet-name>
+    <url-pattern>/SelectionAddWord</url-pattern>
+  </servlet-mapping>
 </web-app>
