@@ -42,12 +42,11 @@ public class Home extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession Session = request.getSession(false);
-		String na = (String) Session.getAttribute("us");
+		String user = (String) Session.getAttribute("name");
 		if(Session != null) {
-			request.setAttribute("name", na);
+			request.setAttribute("name", user);
 			request.getRequestDispatcher("Home.jsp").forward(request, response);	
 		}
-		
 	}
 
 }

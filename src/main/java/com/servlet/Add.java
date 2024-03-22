@@ -1,27 +1,26 @@
 package com.servlet;
 
-import com.java.*;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import jakarta.servlet.http.HttpSession;
-
 import java.io.IOException;
 
+import com.java.AddWordClass;
+
 /**
- * Servlet implementation class AddWord
+ * Servlet implementation class Add
  */
-public class AddWord extends HttpServlet {
+public class Add extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public AddWord() {
+    public Add() {
         super();
-        
+        // TODO Auto-generated constructor stub
     }
 
 	/**
@@ -35,13 +34,10 @@ public class AddWord extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		HttpSession Session = request.getSession(false);
-		
-		if(Session!=null) {
-		String user = (String) Session.getAttribute("name");
-		request.setAttribute("name", user);
-		request.getRequestDispatcher("AddWord.jsp").forward(request, response);
-		}
+		String word = request.getParameter("word");
+		String meaning = request.getParameter("meaning");
+		AddWordClass add = new AddWordClass(word,meaning);
+		int num = add.status();
 	}
 
 }

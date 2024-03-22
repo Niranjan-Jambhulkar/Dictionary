@@ -39,9 +39,8 @@ public class Login extends HttpServlet {
 		LoginCheck lc = new LoginCheck(user, pass);
 		int a = lc.status();
 		if(a==1) {
-			response.getWriter().println("Login Successfully Done!");
 			HttpSession Session = request.getSession(true);
-			Session.setAttribute("us", user);
+			Session.setAttribute("name", user);
 			request.getRequestDispatcher("Home").forward(request, response);
 		}
 		else {

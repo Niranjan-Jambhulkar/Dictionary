@@ -17,7 +17,7 @@
 </head>
 <body class="background-home">
 <%! 
-String a="Meaning"; 
+String Meaning="Meaning"; 
 %>
 <div class="row">
 	<h1 class="home-heading col-10">Dictionary</h1>
@@ -36,7 +36,7 @@ String a="Meaning";
         <label for="word" class="form-label home-label row col-6">Search</label>
         <input type="text" name="word" id="" class="form-control col-6" placeholder="Enter Word" required>
         <textarea name="meaning" id="" cols="38" rows="5" class="form-control home-textarea"  readonly><%
-        String meaning = (String)request.getAttribute("a"); 
+        String meaning = (String)request.getAttribute("Meaning"); 
         if(meaning!=null){
         	out.println(meaning);
         }

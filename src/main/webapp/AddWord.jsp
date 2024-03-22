@@ -28,7 +28,7 @@
 </div>
 
 <div class="home-container">
-    <form action="AddWord" method="post">
+    <form action="Add" method="post">
         <label for="word" class="form-label home-label row col-6">Add Word</label>
         <input type="text" name="word" id="" class="form-control col-6" placeholder="Word" required>
         <textarea name="meaning" id="" cols="38" rows="5" class="form-control home-textarea" placeholder="Meaning" required></textarea>

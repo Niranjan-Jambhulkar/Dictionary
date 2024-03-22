@@ -7,6 +7,8 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
+
 import java.io.IOException;
 
 /**
@@ -35,18 +37,20 @@ public class Search extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String meaning = null;
-		String word = request.getParameter("word");
-		// make word capitalize
-		SearchClass sc = new SearchClass(word);
-		meaning = sc.status();
-		if (meaning!=null) {
-			request.setAttribute("a", meaning);
-			request.getRequestDispatcher("Home.jsp").forward(request, response);
+		HttpSession Session = request.getSession(false);
+		if(Session != null) {
+			String word = request.getParameter("word");
+			// make word capitalize
+			SearchClass sc = new SearchClass(word);
+			meaning = sc.status();
+			if (meaning!=null) {
+				request.setAttribute("Meaning", meaning);
+				request.getRequestDispatcher("Home.jsp").forward(request, response);
+			}
+			else {
+				response.getWriter().println("No Word Found");
+			}
 		}
-		else {
-			response.getWriter().println("No Word Found");
-		}
-		
 	}
 
 }
