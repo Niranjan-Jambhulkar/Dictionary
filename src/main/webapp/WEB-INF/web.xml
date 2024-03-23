@@ -129,4 +129,14 @@
     <servlet-name>PasswordReset</servlet-name>
     <url-pattern>/PasswordReset</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>MyProfile</display-name>
+    <servlet-name>MyProfile</servlet-name>
+    <servlet-class>com.servlet.MyProfile</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MyProfile</servlet-name>
+    <url-pattern>/MyProfile</url-pattern>
+  </servlet-mapping>
 </web-app>

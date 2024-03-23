@@ -1,5 +1,6 @@
 package com.SQLConnection;
 
+import com.java.*;
 import java.io.FileReader;
 import java.io.IOException;
 import java.sql.Connection;
@@ -173,5 +174,23 @@ public class SQL {
 			e.printStackTrace();
 		}
 		return result;
+	}
+	
+	public void myProfile(String user) {
+		String fname = null, lname = null, email = null;
+		try {
+			PreparedStatement ps = conn.prepareStatement("select first_name, last_name, email from accounts where user_name = ?");
+			ps.setString(1, user);
+			ResultSet rs = ps.executeQuery();
+			while(rs.next()) {
+				fname = rs.getString(1);
+				lname = rs.getString(2);
+				email = rs.getString(3);
+			}
+			MyProfileClass mp = new MyProfileClass(fname,lname,email);
+		} 
+		catch (SQLException e) {
+			e.printStackTrace();
+		}
 	}
 }

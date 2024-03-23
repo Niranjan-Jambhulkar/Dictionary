@@ -30,3 +30,7 @@ window.onclick = function(event) {
 function dailog(){
 	alert("Word Added");
 }
+
+function passReset(){
+	location.href = "ForgetPassword.jsp"
+}

@@ -1,5 +1,6 @@
 package com.servlet;
 
+import com.java.*;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -10,24 +11,23 @@ import jakarta.servlet.http.HttpSession;
 import java.io.IOException;
 
 /**
- * Servlet implementation class Dropdown
+ * Servlet implementation class MyProfile
  */
-public class Dropdown extends HttpServlet {
+public class MyProfile extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Dropdown() {
+    public MyProfile() {
         super();
-        // TODO Auto-generated constructor stub
     }
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+
 	}
 
 	/**
@@ -35,17 +35,19 @@ public class Dropdown extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession Session = request.getSession(false);
+		String user = (String) Session.getAttribute("name");
+		
 		if(Session != null) {
-			String value = request.getParameter("select");
-			switch (value) {
-			case "LogOut":
-				request.getRequestDispatcher("LogOut").forward(request, response);
-				break;
-				
-			case "My Profile":
-				request.getRequestDispatcher("MyProfile").forward(request, response);
-				break;
-			}
+			
+			MyProfileClass mp = new MyProfileClass(user);
+			String fname = mp.getfname();
+			String lname = mp.getlname();
+			String email = mp.getemail();
+			response.getWriter().println(fname + lname + email);
+			request.setAttribute("fname", fname);
+			request.setAttribute("lname", lname);
+			request.setAttribute("email", email);
+			//request.getRequestDispatcher("MyProfile.jsp").forward(request, response);
 		}
 	}
 

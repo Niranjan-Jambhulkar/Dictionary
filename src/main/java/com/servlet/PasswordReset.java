@@ -43,10 +43,11 @@ public class PasswordReset extends HttpServlet {
 			Reset rs = new Reset(mail, pass);
 			int result = rs.status();
 			if(result == 1) {
-				response.getWriter().println("Pass change");
+				System.out.println("Password Changed");
+				response.sendRedirect("Index.html");
 			}
 			else {
-				response.getWriter().println("Pass not change");
+				System.out.println("Password not changed");
 			}
 		}
 	}

@@ -328,13 +328,7 @@ a{
 }
 
 .btn{
-	border: none;
-    border-radius: 12px;
-    margin-top: 20px;
-    border-style: none;
-    width: 100px;
-    height: 35px;
-    font-size: large;
+	font-size: large;
 }
 
 /* Profile End*/
