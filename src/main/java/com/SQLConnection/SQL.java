@@ -139,4 +139,39 @@ public class SQL {
 		}
 		return meaning;
 	}
+	
+	public int EmailCheck(String mail) {
+		int result = 0;
+		String email = null;
+		try {
+			PreparedStatement ps = conn.prepareStatement("select email from accounts where email=?");
+			ps.setString(1, mail);
+			ResultSet rs = ps.executeQuery();
+			while(rs.next()) {
+				email = rs.getString(1);
+			}
+			if(mail.equals(email)) {
+				System.out.println("Account Found");
+				result ++;
+			}
+		} 
+		catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return result;
+	}
+	
+	public int PasswordReset(String mail, String pass) {
+		int result =0;
+		try {
+			PreparedStatement ps = conn.prepareStatement("update accounts set user_password = ? where email = ?");
+			ps.setString(1,pass);
+			ps.setString(2, mail);
+			result = ps.executeUpdate();
+		} 
+		catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return result;
+	}
 }

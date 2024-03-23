@@ -2,9 +2,9 @@
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd" id="WebApp_ID" version="6.0">
   <display-name>Dictionary</display-name>
   <welcome-file-list>
-    <welcome-file>index.html</welcome-file>
-    <welcome-file>index.jsp</welcome-file>
-    <welcome-file>index.htm</welcome-file>
+    <welcome-file>Index.html</welcome-file>
+    <welcome-file>Index.jsp</welcome-file>
+    <welcome-file>Index.htm</welcome-file>
     <welcome-file>default.html</welcome-file>
     <welcome-file>default.jsp</welcome-file>
     <welcome-file>default.htm</welcome-file>
@@ -108,5 +108,25 @@
   <servlet-mapping>
     <servlet-name>Dropdown</servlet-name>
     <url-pattern>/Dropdown</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>EmailCheck</display-name>
+    <servlet-name>EmailCheck</servlet-name>
+    <servlet-class>com.servlet.EmailCheck</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>EmailCheck</servlet-name>
+    <url-pattern>/EmailCheck</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>PasswordReset</display-name>
+    <servlet-name>PasswordReset</servlet-name>
+    <servlet-class>com.servlet.PasswordReset</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PasswordReset</servlet-name>
+    <url-pattern>/PasswordReset</url-pattern>
   </servlet-mapping>
 </web-app>
