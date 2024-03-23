@@ -281,45 +281,58 @@ a{
 /* Profile */
 
 .dropbtn {
-  background-color: rgb(238, 137, 48);
-  color: white;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-  border-radius: 12px;
-  height: 40px;
-  width: 90px;
-  margin-top: 15px;
-  text-align: center;
-  
+	background-color: rgb(238, 137, 48);
+	color: white;
+	font-size: 16px;
+	border: none;
+	cursor: pointer;
+	border-radius: 12px;
+	height: 40px;
+	width: 90px;
+	margin-top: 15px;
+	text-align: center;
 }
 
 .dropbtn:hover, .dropbtn:focus {
-  background-color: rgb(238, 137, 48);
+	background-color: rgb(238, 137, 48);
 }
 
 .dropdown {
-  position: relative;
-  display: inline-block;
+	position: relative;
+	display: inline-block;
 }
 
 .dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  overflow: auto;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+	display: none;
+	position: absolute;
+	background-color: #f1f1f1;
+	min-width: 160px;
+	overflow: auto;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
 }
 
 .dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
 }
 
-.dropdown a:hover {background-color: #ddd;}
+.dropdown a:hover {
+	background-color: #ddd;
+}
 
-.show {display: block;}
+.show {
+	display: block;
+}
+
+.btn{
+	border: none;
+    border-radius: 12px;
+    margin-top: 20px;
+    border-style: none;
+    width: 100px;
+    height: 35px;
+    font-size: large;
+}

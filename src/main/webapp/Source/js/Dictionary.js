@@ -26,3 +26,7 @@ window.onclick = function(event) {
     }
   }
 }
+
+function dailog(){
+	alert("Word Added");
+}

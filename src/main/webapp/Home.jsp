@@ -24,10 +24,10 @@ String Meaning="Meaning";
 	
   	<div class="dropdown col">
   		<button onclick="myFunction()" class="dropbtn" >Hi <%=request.getAttribute("name")%></button>
-  		<div id="myDropdown" class="dropdown-content">
-    		<a href="">My Profile</a>
-    		<a href="">Log Out</a>
-  		</div>
+  		<form action="Dropdown" method="post" id="myDropdown" class="dropdown-content">
+    		<input type="submit" name="select" Value="My Profile" class="btn"><br>
+    		<input type="submit" name="select" Value="LogOut" class="btn">
+  		</form>
 	</div>
 </div>
 

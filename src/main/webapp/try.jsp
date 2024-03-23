@@ -24,9 +24,9 @@ String Meaning="Meaning";
 	
   	<div class="dropdown col">
   		<button onclick="myFunction()" class="dropbtn" >Hi <%=request.getAttribute("name")%></button>
-  		<form id="myDropdown" class="dropdown-content">
-    		<a href="">My Profile</a>
-    		<button>Log Out</button>
+  		<form action="Dropdown" method="post" id="myDropdown" class="dropdown-content">
+    		<input type="submit" name="select" Value="My Profile" class="Logout-btn"><br>
+    		<input type="submit" name="select" Value="LogOut" class="Logout-btn"><br>
   		</form>
 	</div>
 </div>

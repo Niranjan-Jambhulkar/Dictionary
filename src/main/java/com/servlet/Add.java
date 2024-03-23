@@ -38,6 +38,7 @@ public class Add extends HttpServlet {
 		String meaning = request.getParameter("meaning");
 		AddWordClass add = new AddWordClass(word,meaning);
 		int num = add.status();
+		request.getRequestDispatcher("AddWord").forward(request, response);
 	}
 
 }

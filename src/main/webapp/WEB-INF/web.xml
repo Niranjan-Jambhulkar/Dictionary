@@ -99,4 +99,14 @@
     <servlet-name>Add</servlet-name>
     <url-pattern>/Add</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Dropdown</display-name>
+    <servlet-name>Dropdown</servlet-name>
+    <servlet-class>com.servlet.Dropdown</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Dropdown</servlet-name>
+    <url-pattern>/Dropdown</url-pattern>
+  </servlet-mapping>
 </web-app>
