@@ -47,7 +47,7 @@ public class MyProfile extends HttpServlet {
 			request.setAttribute("fname", fname);
 			request.setAttribute("lname", lname);
 			request.setAttribute("email", email);
-			//request.getRequestDispatcher("MyProfile.jsp").forward(request, response);
+			request.getRequestDispatcher("MyProfile.jsp").forward(request, response);
 		}
 	}
 

@@ -4,7 +4,7 @@ import com.SQLConnection.*;
 
 public class MyProfileClass {
 	SQL sql = new SQL();
-	String firstName = null, lastName = null, eMail = null;
+	static String firstName = null, lastName = null, eMail = null;
 	
 	public MyProfileClass(String user) {
 		sql.connect();
