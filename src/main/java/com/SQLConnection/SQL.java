@@ -177,17 +177,18 @@ public class SQL {
 	}
 	
 	public void myProfile(String user) {
-		String fname = null, lname = null, email = null;
+		String fname = null, lname = null, email = null, pass = null;
 		try {
-			PreparedStatement ps = conn.prepareStatement("select first_name, last_name, email from accounts where user_name = ?");
+			PreparedStatement ps = conn.prepareStatement("select first_name, last_name, email, user_password from accounts where user_name = ?");
 			ps.setString(1, user);
 			ResultSet rs = ps.executeQuery();
 			while(rs.next()) {
 				fname = rs.getString(1);
 				lname = rs.getString(2);
 				email = rs.getString(3);
+				pass = rs.getString(4);
 			}
-			MyProfileClass mp = new MyProfileClass(fname,lname,email);
+			MyProfileClass mp = new MyProfileClass(fname,lname,email, pass);
 		} 
 		catch (SQLException e) {
 			e.printStackTrace();

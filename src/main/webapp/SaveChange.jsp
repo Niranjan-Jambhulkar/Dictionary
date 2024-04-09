@@ -20,16 +20,16 @@
     <form action="MyProfile" method="post" class="profile-container">
         <p class="">My Profile</p>
        
-        <label class="form-label">First Name</label>
-        <input type="text" name="fname" class="form-control">
-        <label class="form-label">Last Name</label>
-        <input type="text" name="lname" class="form-control">
-        <label class="form-label">Email</label>
-        <input type="email" name="email" class="form-control">
-        <label class="form-label">User Name</label>
-        <input type="text" name="user" class="form-control" readonly>
-         <label class="form-label">Reset Password</label>
-        <input type="password" name="user" class="form-control" >
+        <label class="form-label label">First Name</label>
+        <input type="text" name="fname" class="form-control" value="<%= request.getAttribute("fname") %>">
+        <label class="form-label label">Last Name</label>
+        <input type="text" name="lname" class="form-control" value="<%= request.getAttribute("lname") %>">
+        <label class="form-label label">Email</label>
+        <input type="email" name="email" class="form-control" value="<%= request.getAttribute("email") %>">
+        <label class="form-label label">User Name</label>
+        <input type="text" name="user" class="form-control" value="<%= request.getAttribute("user") %>" readonly>
+         <label class="form-label label">Reset Password</label>
+        <input type="password" name="user" class="form-control" value="<%= request.getAttribute("pass") %>">
         <input type="submit" name="" id="" value="Save Change" class="save-btn">
     </form>
 

@@ -4,7 +4,7 @@ import com.SQLConnection.*;
 
 public class MyProfileClass {
 	SQL sql = new SQL();
-	static String firstName = null, lastName = null, eMail = null;
+	static String firstName = null, lastName = null, eMail = null, pass = null;
 	
 	public MyProfileClass(String user) {
 		sql.connect();
@@ -12,10 +12,11 @@ public class MyProfileClass {
 		sql.close();
 	}
 	
-	public MyProfileClass(String fname, String lname, String email) {
+	public MyProfileClass(String fname, String lname, String email, String pass) {
 		firstName = fname;
 		lastName = lname;
 		eMail = email;
+		this.pass = pass;
 	}
 	
 	public String getfname() {
@@ -28,6 +29,10 @@ public class MyProfileClass {
 	
 	public String getemail() {
 		return eMail;
+	}
+	
+	public String getpass() {
+		return pass;
 	}
 	
 	public static void main(String[] args) {

@@ -139,4 +139,14 @@
     <servlet-name>MyProfile</servlet-name>
     <url-pattern>/MyProfile</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ProfileUpdate</display-name>
+    <servlet-name>ProfileUpdate</servlet-name>
+    <servlet-class>com.servlet.ProfileUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ProfileUpdate</servlet-name>
+    <url-pattern>/ProfileUpdate</url-pattern>
+  </servlet-mapping>
 </web-app>

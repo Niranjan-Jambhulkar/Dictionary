@@ -287,6 +287,7 @@ a{
 	border: none;
 	cursor: pointer;
 	border-radius: 12px;
+	font-weight: 600;
 	height: 40px;
 	width: 90px;
 	margin-top: 15px;
@@ -329,6 +330,22 @@ a{
 
 .btn{
 	font-size: large;
+}
+
+@media (max-width: 600px){
+	dropbtn {
+	background-color: rgb(238, 137, 48);
+	color: white;
+	font-size: 16px;
+	border: none;
+	cursor: pointer;
+	border-radius: 12px;
+	font-weight: 600;
+	height: 20px;
+	width: 50px;
+	margin-top: 0px;
+	text-align: center;
+	}
 }
 
 /* Profile End*/
@@ -375,6 +392,10 @@ a{
     background-color: rgb(235, 151, 72);
     border: none;
     color: white;
+}
+
+.label{
+	padding-top: 5px;
 }
 
 /* My Profile End */

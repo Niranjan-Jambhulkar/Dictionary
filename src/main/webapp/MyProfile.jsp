@@ -17,17 +17,17 @@
 </head>
 <body class="background-home">
     <h1 class="home-heading col-10">Dictionary</h1>
-    <form action="SaveChange.jsp" method="post" class="profile-container">
+    <form action="ProfileUpdate" method="post" class="profile-container">
         <p class="">My Profile</p>
         <input type="submit" name="" id="" value="Update" class="update-btn"><br>
-        <label class="form-label">First Name</label>
+        <label class="form-label label">First Name</label>
         <input type="text" class="form-control" value="<%=request.getAttribute("fname") %>">
-        <label class="form-label">Last Name</label>
+        <label class="form-label label">Last Name</label>
         <input type="text" class="form-control" value="<%=request.getAttribute("lname") %>">
-        <label class="form-label">Email</label>
+        <label class="form-label label">Email</label>
         <input type="email" class="form-control" value="<%=request.getAttribute("email") %>">
-        <label class="form-label">User Name</label>
-        <input type="text" class="form-control" readonly>
+        <label class="form-label label">User Name</label>
+        <input type="text" class="form-control" value="<%=request.getAttribute("user") %>" readonly>
 
     </form>
 
