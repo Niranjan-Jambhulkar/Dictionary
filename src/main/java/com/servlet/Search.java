@@ -38,14 +38,16 @@ public class Search extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String meaning = null;
 		HttpSession Session = request.getSession(false);
+		String user = (String) Session.getAttribute("name");
 		if(Session != null) {
+			request.setAttribute("user", user);
 			String word = request.getParameter("word");
 			// make word capitalize
 			SearchClass sc = new SearchClass(word);
 			meaning = sc.status();
 			if (meaning!=null) {
 				request.setAttribute("Meaning", meaning);
-				request.getRequestDispatcher("Home.jsp").forward(request, response);
+				request.getRequestDispatcher("Home").forward(request, response);
 			}
 			else {
 				response.getWriter().println("No Word Found");
