@@ -194,4 +194,21 @@ public class SQL {
 			e.printStackTrace();
 		}
 	}
+	
+	public void updateProfile(String fname, String lname, String email, String password, String user) {
+		int result;
+		try {
+			PreparedStatement ps = conn.prepareStatement("update accounts set first_name = ?, last_name = ?, email = ?, user_password = ? where user_name = ?");
+			ps.setString(1, fname);
+			ps.setString(2, lname);
+			ps.setString(3, email);
+			ps.setString(4, password);
+			ps.setString(5, user);
+			result = ps.executeUpdate();
+			System.out.println(result + " Row Update");
+		}
+		catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
 }
