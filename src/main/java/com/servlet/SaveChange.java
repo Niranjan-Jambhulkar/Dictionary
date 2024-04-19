@@ -40,7 +40,7 @@ public class SaveChange extends HttpServlet {
 		String pass = request.getParameter("pass");
 		String user = request.getParameter("user");
 		Change ch = new Change(fname, lname, email, pass, user);
-		request.getRequestDispatcher("MyProfile").forward(request, response);
+		request.getRequestDispatcher("Home").forward(request, response);
 	}
 
 }

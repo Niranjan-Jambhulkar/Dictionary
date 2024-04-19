@@ -39,7 +39,7 @@
         <input type="submit" name="select" value="Meaning" class="option-text non-selection pointer col-6">
         <input type="submit" name="select" value="Add Word" class="option-text option-selection pointer col-6">
     </form>
-    
+     <p style="padding-top: 90px; padding-left: 50px; font-weight:500"><a href="https://niranjanjambhulkar.netlify.app/">© Niranjan Jambhulkar</a></p>
 </div>
 </body>
 </html>
